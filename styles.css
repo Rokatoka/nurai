@@ -48,20 +48,21 @@ text-align: center;
 }
 
 .testimonials-section .container {
-max-width: 1200px;
-margin: auto;
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .testimonial {
-background-color: #fff; /* White background for testimonials */
-border-radius: 15px;
-padding: 20px;
-margin: 10px;
-width: 45%; /* Testimonial width */
-position: relative;
+    background-color: #fff; /* White background for testimonials */
+    border-radius: 15px;
+    padding: 20px;
+    width: 45%; /* Testimonial width */
+    position: relative;
+    box-sizing: border-box;
 }
 
 .testimonial-image {
@@ -108,12 +109,15 @@ margin-top: 10px;
 }
 
 header {
-  background: #7D3C98; /* Brand color */
-  padding: 10px 20px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    position: sticky;
+    top: 0;
+    background: #7D3C98; /* Brand color */
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 
 nav ul {
@@ -228,6 +232,7 @@ margin-right: 70px;
 
 .hero button {
   background: #f4d03f;
+  border-radius: 12px;
   border: none;
   padding: 10px 20px;
   font-size: 1.5em;
@@ -237,7 +242,11 @@ margin-right: 70px;
 }
 
 .hero button:hover {
-  background: #808080; /* Darker shade for button hover */
+  background: #ffff66; /* Darker shade for button hover */
+}
+
+.about-text {
+    line-height: 2.5rem;
 }
 
 /* Other section styles go here */
@@ -278,12 +287,6 @@ margin-right: 70px;
       padding: 8px 16px; /* Adjust button padding */
   }
 
-  nav ul {
-      flex-direction: column;
-      align-items: center;
-      padding: 0;
-  }
-
   nav a {
       margin-bottom: 10px; /* Add space between nav items */
   }
@@ -292,27 +295,44 @@ margin-right: 70px;
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
-      font-size: 3em; /* Smaller for mobile devices */
-  }
+    .hero h1 {
+        font-size: 3em; /* Smaller for mobile devices */
+    }
 
-  .hero p {
-      font-size: 1.2rem; /* Smaller text for mobile readability */
-  }
+    .hero p {
+        font-size: 1.2rem; /* Smaller text for mobile readability */
+    }
 
-  .hero button {
-      font-size: 1em; /* Smaller button text on mobile devices */
-  }
+    .hero button {
+        font-size: 1em; /* Smaller button text on mobile devices */
+    }
 
-  /* Adjust nav to be more mobile-friendly */
-  nav ul {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-  }
+    nav ul {
+        gap: 12px;
+    }
+    
+    nav a {
+        flex: 1 1 auto; /* Allow nav items to wrap as needed */
+        text-align: center;
+        padding: 10px;
+    }
 
-  nav a {
-      flex: 1 1 auto; /* Allow nav items to wrap as needed */
-      text-align: center;
-      padding: 10px;
-  }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 24px;
+    background-color: #7D3C98;
+}
+.footer__text {
+    color: white;
+    font-size: 0.7rem;
+}
